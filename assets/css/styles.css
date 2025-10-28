@@ -181,8 +181,21 @@ details.log summary {
   font-weight: 600;
   letter-spacing: 0.02em;
   list-style: none;
+  position: relative;
 }
 
+details.log summary::after {
+  content: "▶";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1em;
+  transition: transform 0.2s;
+  color: var(--color-accent);
+}
+
+details.log[open] summary::after {
+  content: "▼";
+}
 details.log summary::-webkit-details-marker {
   display: none;
 }
