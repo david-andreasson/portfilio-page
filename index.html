@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ditt Namn · Javautvecklare – Integration</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="profile">
+        <div class="profile-summary">
+          <div>
+            <h1>David Andreasson</h1>
+            <p class="role">Javautvecklare – Integration</p>
+            <p class="intro-text">
+            Utvecklar backend-tjänster i Java och Spring Boot med fokus på API:er, mikrotjänster och robusta integrationer.
+            Söker LIA-plats våren 2026 (05/01 – 22/05).
+            </p>
+          </div>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <span class="icon" aria-hidden="true">Email</span>
+            <a href="mailto:davidandreasson@live.com">davidandreasson@live.com</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/dandreasson/"
+              target="_blank"
+              rel="noopener"
+              >linkedin.com/in/dandreasson</a
+            >
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">GitHub</span>
+            <a
+              href="https://github.com/david-andreasson"
+              target="_blank"
+              rel="noopener"
+              >github.com/david-andreasson</a
+            >
+          </li>
+        </ul>
+      </header>
+
+      <main class="layout">
+        <section class="content">
+          <section class="block" id="projekt">
+            <h2 class="block-title">Projekt</h2>
+
+            <article class="project">
+              <header class="project-header">
+                <h3>Drillbi – Adaptiv quizplattform</h3>
+                <span class="project-meta">2024–2025 · Java · Spring Boot</span>
+              </header>
+              <a class="project-image-link" href="drillbi.html">
+                <img
+                  src="assets/img/drillbi-right-answer-2.png"
+                  alt="Skärmdump från Drillbi med AI-förklaring"
+                  class="project-image"
+                />
+              </a>
+              <p>
+                En webbapplikation som hjälper undervisande personal och
+                studerande att skapa och genomföra quiz på ett modernt och
+                lättanvänt sätt. Projektet kombinerar AI-stöd med en tydlig
+                struktur så att användare snabbt hittar rätt.
+              </p>
+              <ul>
+                <li>Frågeordning kan väljas: i ordning, baklänges eller slumpad.</li>
+                <li>Vid fel svar visas knappen ”Förklara med AI”; en AI-genererad förklaring kan begäras för att tydliggöra varför rätt alternativ är rätt.</li>
+                <li>Felbesvarade frågor återkommer senare i frågelistan på ett slumpmässigt index (10–15) för repetition.</li>
+                <li>Text-till-quiz-verktyg: text kan matas in och quizfrågor genereras automatiskt, med språkalternativ och sparfunktion.</li>
+                <li>OCR-stöd finns: text kan läsas från fotade eller uppladdade bilder (t.ex. en boksida) och användas för att skapa nya quizfrågor.</li>
+              </ul>
+              <a class="project-link" href="drillbi.html">Läs mer om projektet</a>
+              <a
+                class="project-link"
+                href="https://github.com/david-andreasson/drillbi_backend"
+                target="_blank"
+                rel="noopener"
+                >Öppna repot på Github</a
+              >
+            </article>
+
+            <article class="project">
+              <header class="project-header">
+                <h3>E-commerce Microservices</h3>
+                <span class="project-meta">2025 · Spring Boot · Docker · Nginx</span>
+              </header>
+              <a class="project-image-link" href="ecommerce.html">
+                <img
+                  src="assets/img/ecom-products-2.png"
+                  alt="Skärmdump från e-handelsprojektets produktlista"
+                  class="project-image"
+                />
+              </a>
+              <p>
+                Ett e-handelssystem där beställningar, produkter och kunddata
+                hanteras av var sin tjänst men samarbetar sömlöst. Målet är att
+                visa hur en större lösning kan delas upp för att bli lättare att
+                underhålla.
+              </p>
+              <ul>
+                <li>Orderflöden följs upp med korrelations-ID så att varje steg kan spåras mellan mikrotjänsterna.</li>
+                <li>Felmeddelanden levereras som ProblemDetail-svar för att ge tydlig återkoppling till klienter och övervakning.</li>
+                <li>JWT-baserade anrop valideras i varje tjänst innan data lämnas ut till användare eller andra system.</li>
+                <li>Digitala produkter levereras automatiskt efter köp genom ett entitlements-flöde som integreras med användartjänsten.</li>
+                <li>Tjänsterna orkestreras i Docker Compose så att hela systemet startas och uppdateras med ett kommando.</li>
+              </ul>
+              <a class="project-link" href="ecommerce.html">Läs mer om projektet</a>
+              <a
+                class="project-link"
+                href="https://github.com/dittkonto/ecom-microservices-project"
+                target="_blank"
+                rel="noopener"
+                >Öppna repot på Github</a
+              >
+            </article>
+
+            <article class="project">
+              <header class="project-header">
+                <h3>Coming soon: Examensarbete</h3>
+                <span class="project-meta">Planerat · Java · Spring Boot · AI · Crypto · Discord</span>
+              </header>
+              <a class="project-image-link" href="examensarbete.html">
+                <img
+                  src="assets/img/01-ex-skiss.png"
+                  alt="Konceptskiss för examensarbetet"
+                  class="project-image"
+                />
+              </a>
+              <p>
+                Ett kommande examensarbete där moderna integrationer mellan AI-tjänster, kryptoteknik och community-plattformar utforskas. Fokus ligger på skalbar backend i Java med Spring Boot och hur realtidsdata kan göras användbart i olika kanaler.
+              </p>
+              <ul>
+                <li>Planeras att kombinera AI-drivna rekommendationer och externa API:er.</li>
+                <li>Målet är att skapa ett demonstrationsprojekt som visar upp integrationer för framtida arbetsgivare.</li>
+              </ul>
+              <a class="project-link" href="examensarbete.html">Läs mer om projektet</a>
+              <span class="project-link project-link--disabled" aria-disabled="true">Detaljer publiceras vid projektstart</span>
+            </article>
+          </section>
+
+          <section class="block">
+            <h2 class="block-title">Profil</h2>
+            <p>Jag heter David Andreasson och studerar till Javautvecklare – Integration vid Campus Mölndal.</p>
+            <p>Jag gillar att bygga system som hänger ihop, där olika delar kommunicerar sömlöst genom välbyggda API:er och smarta integrationer.</p>
+            <p>Under utbildningen har jag fått arbeta med Java, Spring Boot, REST API:er, databaser och Docker, men också med testning, CI/CD och molnlösningar.</p>
+            <p>Jag trivs när jag får bygga välstrukturerade lösningar, förstå hur systemen hänger ihop och skapa tydliga flöden mellan dem.</p>
+            <p>Jag har en bakgrund utanför IT-branschen, vilket har gett mig både arbetsvana, struktur och problemlösningsförmåga. Det gör att jag tar mig an utveckling med samma inställning som allt annat jag gör, jag vill förstå på djupet och leverera något som fungerar på riktigt.</p>
+            <p>Just nu fokuserar jag på att fördjupa mig i backend-utveckling, integration och automatisering, och mitt nästa mål är att hitta en LIA-plats där jag kan bidra med mina kunskaper inom Java, Spring Boot och systemintegration, samtidigt som jag får möjlighet att utvecklas vidare i en professionell miljö.</p>
+          </section>
+
+          <section class="block">
+            <h2 class="block-title">LIA & karriärmål</h2>
+            <p>Under våren 2026 ska jag genomföra min LIA (Lärande i arbete), och mitt mål är att hitta en plats där jag får utvecklas inom backend och systemintegration, gärna med fokus på API:er, mikrotjänster och flöden mellan system.</p>
+            <p>Jag har arbetat mest med Java och Spring Boot, men är öppen för andra tekniska miljöer där jag kan bidra med samma strukturerade och lösningsorienterade arbetssätt. I första hand söker jag en roll inom integrationsutveckling med Java, men jag är lika intresserad av backendutveckling i Java eller integrationer i andra språk, till exempel C#.</p>
+            <p>Kort sagt: mitt mål är att få arbeta med backend eller integrationer, oavsett språk, så länge jag får bygga välstrukturerade lösningar, fortsätta att utvecklas och lära mig nya tekniker och bidra till något som ger nytta åt människor och används i praktiken.</p>
+          </section>
+        </section>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Teknisk kompetens</h3>
+            <ul class="tag-list">
+              <li>Java 21 och Spring Boot för backendutveckling</li>
+              <li>REST API:er med autentisering via OAuth2/JWT</li>
+              <li>Testning med Junit och Jacoco</li>
+              <li>Dokumentation med Swagger och OpenAPI-standard</li>
+              <li>SQL och databashantering i relationsdatabaser</li>
+              <li>CI/CD-pipelines med Azure DevOps, GitHub Actions och Docker</li>
+              <li>Grundläggande förståelse för molnintegration och Azure-koncept</li>
+            </ul>
+
+            <hr />
+
+          <h3>Utbildning</h3>
+          <div class="education">
+            <h4>Javautvecklare – Integration</h4>
+            <p>Yrkesutbildning · Campus Mölndal · 2024–2026</p>
+            <p class="education-note">
+              Fokus på integration, backendutveckling i Java och molnbaserade lösningar.
+            </p>
+
+            <h5>Avslutade kurser</h5>
+            <ul class="tag-list courses">
+              <li>OOP i Java – grund</li>
+              <li>OOP i Java – fördjupning</li>
+              <li>Databashantering och design</li>
+              <li>Test och kvalitetssäkring</li>
+              <li>API:er och webbtjänster</li>
+              <li>Dataförberedelse för AI</li>
+              <li>Systemintegration</li>
+              <li>Konsultmässighet och kommunikation</li>
+              <li>Molnintegration</li>
+            </ul>
+            <p class="education-note"><strong>Alla ovanstående kurser betygsatta: VG.</strong></p>
+
+            <h5>Pågående / kommande</h5>
+            <ul class="tag-list courses">
+              <li>Examensarbete</li>
+              <li>LIA – Lärande i arbete (våren 2026)</li>
+            </ul>
+          </div>
+
+
+            <hr />
+
+            <h3>Verktyg</h3>
+            <ul class="tag-list">
+              <li>IntelliJ IDEA</li>
+              <li>Git &amp; GitHub</li>
+              <li>Postman</li>
+              <li>Docker</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <a href="#top">Till toppen</a>
+        <p>&copy; <span id="year"></span> David Andreasson</p>
+      </footer>
+    </div>
+
+    <script>
+      const yearSpan = document.getElementById("year");
+      yearSpan.textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/lightbox.js"></script>
+  </body>
+</html>

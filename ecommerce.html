@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-commerce Microservices – Detaljerad projektöversikt</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="project-page">
+    <div class="page">
+      <header class="project-page__header">
+        <a class="project-page__back" href="index.html">← Tillbaka till portfolion</a>
+        <h1>E-commerce Microservices Platform</h1>
+        <p class="project-page__lead">
+          En modulär e-handelsplattform byggd med mikroservice-arkitektur där varje tjänst är oberoende och kan skalas individuellt.
+          Systemet hanterar produkter, ordrar, användare och betalningar genom separata services som kommunicerar via REST API:er.
+          Inkluderar även AI-genererade horoskop som digital produkt med PDF-generering.
+        </p>
+      </header>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Teknisk översikt</h2>
+        <ul class="project-detail-list">
+          <li><strong>Tech stack:</strong> React 18 + TypeScript (frontend), Spring Boot 3.5 + Java 21 (backend)</li>
+          <li><strong>Arkitektur:</strong> Mikroservices med tre oberoende backend-tjänster (User, Product, Order)</li>
+          <li><strong>Autentisering:</strong> JWT-baserad autentisering med centraliserad user-service</li>
+          <li><strong>Deployment:</strong> Docker Compose för lokal utveckling, Docker Hub för image-distribution</li>
+          <li><strong>Testning:</strong> JUnit 5 med JaCoCo-täckningsrapporter för varje microservice</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Arkitektur & integrationer</h2>
+        <p>
+          Projektet följer mikroservice-principerna där varje tjänst har sitt eget ansvarsområde och databas. 
+          Services kommunicerar via REST API:er och kan deployas och skalas oberoende av varandra.
+        </p>
+        <ul class="project-detail-list">
+          <li><strong>User Service:</strong> Hanterar registrering, inloggning, JWT-tokens och användarrättigheter</li>
+          <li><strong>Product Service:</strong> Produktkatalog med CRUD-operationer, bildhantering och lagerhantering</li>
+          <li><strong>Order Service:</strong> Orderhantering, betalningar via Stripe och AI-genererade horoskop</li>
+          <li><strong>Frontend:</strong> React SPA med Vite, serveras via Nginx i Docker</li>
+          <li><strong>OpenAPI/Swagger:</strong> Automatisk API-dokumentation för alla backend-services</li>
+          <li><strong>Stripe Integration:</strong> Payment Intents API för säkra betalningar och webhook-hantering</li>
+          <li><strong>OpenAI/1min.ai:</strong> AI-generering av personliga horoskop baserat på användardata</li>
+          <li><strong>OpenPDF:</strong> Genererar PDF-dokument för digitala produkter (horoskop)</li>
+          <li><strong>Spring Actuator:</strong> Health checks och metrics för varje service</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Skärmbilder</h2>
+        <div class="project-gallery">
+          <figure>
+            <img src="assets/img/1-ecom-login.png" alt="Registreringsformulär med fält för personuppgifter och lösenord" />
+            <figcaption>1. Registrering där användare anger personliga uppgifter för att skapa ett konto och blir automatiskt inloggad.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/2-ecom-products.png" alt="Produktkatalog med AI-horoskop i olika plan" />
+            <figcaption>2. Produktgalleri med köpknappar och prisinformation.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/3-ecom-cart.png" alt="Varukorg med vald produkt och köpknappar" />
+            <figcaption>3. Varukorg som visar valda produkter, antal och totalbelopp.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/4-ecom-checkout-with-stripe.png" alt="Kassasida med Stripe betalformulär" />
+            <figcaption>4. Stripe-checkout med kortbetalning och Klarna som alternativ.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/5-ecom-info-sent-to-ai-for-horoscope-generation.png" alt="Formulär där kunddata genererar personligt horoskop" />
+            <figcaption>5. AI-flöde där kundens uppgifter skickas för produktgenerering.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/6-delivered-product.png" alt="PDF-visning av levererat AI-horoskop" />
+            <figcaption>6. Levererat horoskop med inline PDF-visning och nedladdningsval.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/7-order-history.png" alt="Orderhistorik som visar genomförd beställning" />
+            <figcaption>7. Orderhistorik med status, totalsumma och artikelinformation.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Nyckelfunktioner</h2>
+        <ul class="project-detail-list">
+          <li><strong>Användarhantering:</strong> Registrering, inloggning, profilhantering och aktivitetsloggning</li>
+          <li><strong>Produktkatalog:</strong> Skapa, redigera och ta bort produkter med bilduppladdning och kategorisering</li>
+          <li><strong>Lagerhantering:</strong> Realtidsuppdatering av lagersaldo med reservation vid köp</li>
+          <li><strong>Orderhantering:</strong> Komplett orderflöde från varukorg till bekräftelse med orderhistorik</li>
+          <li><strong>Stripe-betalningar:</strong> Säkra kortbetalningar med Payment Intents och webhook-validering</li>
+          <li><strong>Entitlement-system:</strong> Hantering av digitala rättigheter och konsumerbara produkter</li>
+          <li><strong>AI-horoskop:</strong> Personliga horoskop genererade med OpenAI och levererade som PDF</li>
+          <li><strong>Analytics:</strong> Orderstatistik och försäljningsdata för administratörer</li>
+          <li><strong>Service-to-service kommunikation:</strong> Order Service anropar User och Product Services för validering</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Mikroservice-arkitektur</h2>
+        <p>
+          Varje service är helt oberoende med egen databas (H2 för utveckling) och kan deployas separat. 
+          Detta ger flexibilitet att skala specifika delar av systemet baserat på belastning.
+        </p>
+        <ul class="project-detail-list">
+          <li><strong>Separation of Concerns:</strong> Varje service har ett tydligt ansvarsområde utan överlappning</li>
+          <li><strong>Oberoende deployment:</strong> Services kan uppdateras utan att påverka andra delar av systemet</li>
+          <li><strong>Skalbarhet:</strong> Individuell skalning av services baserat på behov (t.ex. fler Product Service-instanser)</li>
+          <li><strong>Resiliens:</strong> Om en service går ner påverkas inte nödvändigtvis hela systemet</li>
+          <li><strong>Docker Compose:</strong> Enkel lokal utvecklingsmiljö med alla services och nätverk konfigurerade</li>
+          <li><strong>Versionshantering:</strong> Varje service har sitt eget Git-repository som submodule</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Lärdomar</h2>
+        <p>
+          Detta projekt har gett djup förståelse för mikroservice-arkitektur och de utmaningar som kommer med distribuerade system. 
+          Att designa API-kontrakt mellan services, hantera service-to-service-kommunikation och säkerställa datakonsistens över 
+          tjänstgränser kräver noggrann planering. Implementationen av JWT-baserad autentisering som delas mellan alla services 
+          lärde mig vikten av centraliserad användarhantering och säker token-validering.
+        </p>
+        <p>
+          Att arbeta med Stripe webhooks lärde mig vikten av idempotens och säker webhook-validering för att undvika dubbelbetalningar.
+          Docker Compose-konfigurationen gjorde det möjligt att köra hela systemet lokalt 
+          med realistiska nätverksförhållanden, vilket påskyndade utvecklingen avsevärt.
+        </p>
+      </section>
+
+      <footer class="project-page__footer">
+        <a class="project-link" href="https://github.com/david-andreasson/ecom-microservices-project" target="_blank" rel="noopener">
+          Öppna repot
+        </a>
+        <a class="project-link" href="index.html">Tillbaka till portfolion</a>
+      </footer>
+    </div>
+    <script src="assets/js/lightbox.js"></script>
+  </body>
+</html>

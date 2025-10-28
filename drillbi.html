@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drillbi – Detaljerad projektöversikt</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="project-page">
+    <div class="page">
+      <header class="project-page__header">
+        <a class="project-page__back" href="index.html">← Tillbaka till portfolion</a>
+        <h1>Drillbi – Adaptiv quizplattform</h1>
+        <p class="project-page__lead">
+          En AI-stödd quizplattform som kan generera nya frågor utifrån ditt material och låter dig repetera svåra frågor oftare.
+          Drillbi hjälper studenter att lära sig effektivare genom att automatiskt generera quizfrågor från text eller bilder, 
+          och genom att återinföra felaktigt besvarade frågor efter en stund för att befästa kunskapen.
+        </p>
+      </header>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Teknisk översikt</h2>
+        <ul class="project-detail-list">
+          <li><strong>Tech stack:</strong> React 19 + TypeScript (frontend), Spring Boot 3.4 + Java 21 (backend)</li>
+          <li><strong>State management:</strong> React Context API för global state, custom hooks för lokal state</li>
+          <li><strong>Autentisering:</strong> OAuth2 (Google/GitHub) + JWT-tokens, Spring Security</li>
+          <li><strong>Deployment:</strong> Docker-containers, CI/CD med GitHub Actions</li>
+          <li><strong>Testning:</strong> JUnit 5 med JaCoCo-täckningsrapporter för backend</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Arkitektur & integrationer</h2>
+        <p>
+          Drillbi är byggd med en modern mikroservice-arkitektur där frontend och backend är helt separerade. 
+          Systemet integrerar flera externa tjänster för att leverera en komplett lärplattform.
+        </p>
+        <ul class="project-detail-list">
+          <li><strong>REST API:</strong> Backend exponerar ett RESTful API med versionshantering (/api/v2/)</li>
+          <li><strong>OpenAI Integration:</strong> GPT-modeller för att generera quizfrågor och AI-förklaringar</li>
+          <li><strong>Anthropic Claude:</strong> Alternativ AI-modell för frågegenerering (Claude 3 Haiku)</li>
+          <li><strong>OCR med Tesseract:</strong> Extraherar text från uppladdade bilder för att skapa quiz</li>
+          <li><strong>Stripe Payments:</strong> Hanterar prenumerationer och betalningar för premium-funktioner</li>
+          <li><strong>MySQL Database:</strong> Persistent lagring av användare, kurser och frågor</li>
+          <li><strong>H2 Database:</strong> In-memory databas för utveckling och testning</li>
+          <li><strong>JPA & Hibernate:</strong> ORM för databashantering med automatisk schema-generering</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Nyckelfunktioner</h2>
+        <ul class="project-detail-list">
+          <li><strong>AI-genererade frågor:</strong> Skapa automatiskt quizfrågor från valfri text med OpenAI eller Claude</li>
+          <li><strong>Bild-till-quiz:</strong> Ladda upp bilder av läroböcker eller anteckningar, OCR extraherar texten och AI genererar frågor</li>
+          <li><strong>Adaptiv repetition:</strong> Felaktigt besvarade frågor läggs tillbaka i kön efter 10-15 frågor för effektiv inlärning</li>
+          <li><strong>AI-förklaringar:</strong> Få detaljerade förklaringar på varje fråga och svar med hjälp av AI</li>
+          <li><strong>Flerspråkigt stöd:</strong> Fullständigt stöd för svenska och engelska med i18next</li>
+          <li><strong>Kurshantering:</strong> Skapa, redigera och organisera kurser med anpassade frågor</li>
+          <li><strong>Frågeredigering:</strong> Manuellt redigera AI-genererade frågor eller skapa egna från grunden</li>
+          <li><strong>Statistik & progress:</strong> Realtidsstatistik över rätta svar, felfrekvens och framsteg</li>
+          <li><strong>Premium-funktioner:</strong> Stripe-integration för prenumerationer med utökade AI-funktioner</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Skärmbilder</h2>
+        <div class="project-gallery">
+          <figure>
+            <img src="assets/img/1-login.png" alt="Inloggningsvy där användare kan ange uppgifter eller logga in med Google" />
+            <figcaption>1. Inloggningsflödet med stöd för traditionell inloggning och Google-auth.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/2-select-course.png" alt="Kurstabell med flera valbara quizkurser och språkknappar" />
+            <figcaption>2. Kursöversikt med språkväxlare för att starta rätt quiz.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/3-right-answer.png" alt="Quizfråga där ett rätt svar markeras i grönt" />
+            <figcaption>3. Frågesession som markerar korrekt svar och visar progression.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/4-wrong-answer-with-ai-explanation..png" alt="Quizfråga med fel svar i rött och AI-förklaring" />
+            <figcaption>4. AI-genererad förklaring efter fel svar för fördjupad förståelse.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/5-create-new-course.png" alt="Formulär för att skapa en ny kurs" />
+            <figcaption>5. Enkel kurskapare med validering av namn och valfri beskrivning.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/6-add-questions.png" alt="Formulär för att lägga till nya frågor till en kurs" />
+            <figcaption>6. Frågeeditor där du kan skriva frågor, svar och ladda upp bilder.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/7-text-to-quiz.png" alt="Text-till-quiz vy där text klistras in och språk väljs" />
+            <figcaption>7. Text-till-quiz generering med liveberäkning av uppskattat antal frågor.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/8-photo-to-quiz.png" alt="Foto-till-quiz kort där användare kan extrahera text från bild" />
+            <figcaption>8. Foto-till-quiz flöde som laddar upp bilder och extraherar text.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Lärdomar</h2>
+        <p>
+          Backend-utvecklingen av Drillbi har varit en djupdykning i modern Java-utveckling med Spring Boot. Projektet har gett 
+          omfattande erfarenhet av att bygga robusta REST APIs, hantera komplex affärslogik och integrera externa tjänster som 
+          OpenAI, Anthropic Claude och Stripe. Att arbeta med Spring Security för OAuth2-autentisering och JWT-tokens har gett 
+          solid förståelse för säker autentiseringshantering i produktionsmiljö.
+        </p>
+
+        <p>
+          Integration med flera AI-modeller (OpenAI GPT och Claude) krävde omfattande arbete med prompt-engineering, felhantering 
+          och parsing av JSON-svar från olika API:er. Att hantera OCR med Tesseract för bild-till-text-funktionalitet var också 
+          en lärorik utmaning, särskilt kring bildbehandling och textextraktion. Stripe-integrationen lärde mig hur man hanterar 
+          webhooks, betalningsflöden och prenumerationshantering på ett säkert sätt.
+        </p>
+      </section>
+
+      <footer class="project-page__footer">
+        <a class="project-link" href="https://github.com/david-andreasson/drillbi_backend" target="_blank" rel="noopener">
+          Öppna repot
+        </a>
+        <a class="project-link" href="index.html">Tillbaka till portfolion</a>
+      </footer>
+    </div>
+    <script src="assets/js/lightbox.js"></script>
+  </body>
+</html>
