@@ -165,6 +165,57 @@ a:focus {
   font-size: 0.95rem;
 }
 
+details.log {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 16px 18px;
+}
+
+details.log + details.log {
+  margin-top: 16px;
+}
+
+details.log summary {
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  list-style: none;
+  position: relative;
+}
+
+details.log summary::after {
+  content: "▶";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1em;
+  transition: transform 0.2s;
+  color: var(--color-accent);
+}
+
+details.log[open] summary::after {
+  content: "▼";
+}
+details.log summary::-webkit-details-marker {
+  display: none;
+}
+
+details.log[open] summary {
+  color: var(--color-accent);
+}
+
+.log-entry {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.log-entry ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-muted);
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
