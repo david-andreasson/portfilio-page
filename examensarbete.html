@@ -3,107 +3,156 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Examensarbete – Förstudie och plan</title>
+    <title>Examensarbete – AI-driven integrationsplattform</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="project-page">
     <div class="page">
       <header class="project-page__header">
         <a class="project-page__back" href="index.html">← Tillbaka till portfolion</a>
-        <h1>Examensarbete – multipla integrationer</h1>
+        <h1>Examensarbete – AI-driven integrationsplattform för nyhetsanalys och notifiering</h1>
         <p class="project-page__lead">
-          Förstudie inför kommande examensarbete där moderna integrationer mellan AI-tjänster,
-          kryptoteknik och community-plattformar (Discord) utforskas. Målet är att bygga en
-          demonstrationslösning som visar upp teknisk bredd och integrationstänk.
+          Ett examensarbete inom systemintegration som fokuserar på att bygga en modulär mikrotjänst-arkitektur
+          där nyhetsdata, AI-analys, kryptobetalningar och notifieringar kopplas samman till en enhetlig plattform.
+          Målet är att visa hur flera externa API:er och datakällor kan integreras säkert, skalbart och automatiserat.
         </p>
       </header>
 
       <section class="block project-page__section">
         <h2 class="block-title">Projektmål</h2>
         <ul class="project-detail-list">
-          <li>Bygga en backend i Java/Spring Boot som kopplar samman AI-API:er, kryptotjänster och Discord.</li>
-          <li>Demonstrera realtidsflöden där användare får rekommendationer, notifieringar och dashboards.</li>
-          <li>Fokusera på säkerhet, spårbarhet och hur data rör sig mellan externa tjänster.</li>
-          <li>Dokumentera lösningen så att den kan visas upp för potentiella arbetsgivare.</li>
+          <li>Utveckla en backend bestående av flera mikrotjänster i Spring Boot som samverkar via REST-API:er.</li>
+          <li>Integrera RSS-flöden och API:er från nyhetskällor (CoinTelegraph, Decrypt, Coindesk, Reddit, NewsData.io).</li>
+          <li>Analysera och sammanfatta nyhetsflöden med hjälp av AI för att skapa användbara notifieringar.</li>
+          <li>Möjliggöra betalningar via kryptovaluta för prenumerationstjänster.</li>
+          <li>Distribuera notifieringar till användare via Discord, Telegram, e-post eller webb-dashboard.</li>
+          <li>Demonstrera en professionell integrationslösning med CI/CD-flöde och containerbaserad drift.</li>
         </ul>
       </section>
 
       <section class="block project-page__section">
-        <h2 class="block-title">Planerad teknikstack</h2>
+        <h2 class="block-title">Teknisk miljö</h2>
         <ul class="project-detail-list">
-          <li><strong>Backend:</strong> Java 21, Spring Boot 3, Spring Security</li>
-          <li><strong>AI-integration:</strong> TBD</li>
-          <li><strong>Crypto:</strong> TBD</li>
-          <li><strong>Community:</strong> Discord-integration, möjligtvis Telegram</li>
-          <li><strong>Data:</strong> TBD</li>
-          <li><strong>Deploy:</strong>TBD - Möjligvis Docker och GitHub Actions</li>
+          <li><strong>Backend:</strong> Java 21, Spring Boot 3, Spring Security, REST-API:er</li>
+          <li><strong>Databas:</strong> H2 för utveckling, PostgreSQL för produktion</li>
+          <li><strong>AI-integration:</strong> OpenAI – sammanfattning och sentimentanalys</li>
+          <li><strong>Datakällor:</strong> RSS-flöden + NewsData.io-API</li>
+          <li><strong>Betalningar:</strong> Monero och Bitcoin-integrationer via separata services</li>
+          <li><strong>Notifieringar:</strong> E-post, Discord, Telegram, webb-frontend</li>
+          <li><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD-pipeline för automatisk build och deploy</li>
         </ul>
       </section>
 
       <section class="block project-page__section">
-        <h2 class="block-title">Arkitektur-idéer</h2>
+        <h2 class="block-title">Arkitektur</h2>
         <p>
-          Lösningen planeras som en mikrotjänst-inspirerad struktur där huvud-API:t fungerar som hubb
-          och integrerar olika externa tjänster.
+          Plattformen är uppbyggd som ett nätverk av mikrotjänster där varje komponent har ett tydligt ansvar.
+          <strong>reporter-service</strong> agerar som datainsamlare och analysmotor,
+          <strong>subscriptions-service</strong> hanterar användarens aktiva prenumerationer,
+          och <strong>notifications-service</strong> distribuerar sammanställd information till användaren.
+          Betaltjänsterna för <strong>XMR</strong> och <strong>BTC</strong> hanterar betalningar.
         </p>
-        <ul class="project-detail-list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
 
-      <section class="block project-page__section">
-        <h2 class="block-title">Planerad tidslinje</h2>
         <ul class="project-detail-list">
-          <li><strong>Vecka 1:</strong> Förstudie, kravinsamling, PoC för AI- och crypto-integration.</li>
-          <li><strong>Vecka 2:</strong> Systemdesign, sprintplanering och uppsättning av CI/CD.</li>
-          <li><strong>Vecka 3</strong> XXX</li>
-          <li><strong>Vecka 4</strong> XXX</li>
-          <li><strong>Vecka 5</strong> XXX</li>
-          <li><strong>Vecka 6</strong> XXX</li>
-          <li><strong>Vecka 7</strong> XXX</li>
-          <li><strong>Slutleverans:</strong> Visning för handledare + portfolio-demo.</li>
+          <li><strong>accounts-service:</strong> Hantering av användarkonton, API-nycklar och autentisering.</li>
+          <li><strong>payments-btc/xmr-service:</strong> Initierar och verifierar kryptobetalningar.</li>
+          <li><strong>subscriptions-service:</strong> Aktiverar eller stänger prenumerationer beroende på betalningsstatus.</li>
+          <li><strong>reporter-service:</strong> Samlar in RSS-flöden, filtrerar, sammanfattar och analyserar innehåll via AI.</li>
+          <li><strong>notifications-service:</strong> Distribuerar analyser och notifieringar till E-post, Discord, Telegram och frontend.</li>
         </ul>
-      </section>
 
-      <section class="block project-page__section">
-        <h2 class="block-title">Visuella referenser</h2>
-        <p>
-          Då implementationen ännu inte har startat fokuserar sidan på planering och skisser.
-          Nedan finns en vy över den planerade strukturens huvudkomponenter.
-        </p>
         <div class="project-gallery">
           <figure>
-            <img src="assets/img/novareport-architecture-v2.drawio.png" alt="Konceptskiss över examensarbetets integrationsplattform" />
-            <figcaption>Konceptuell skiss över hur AI, kryptotjänster och community-kanaler kopplas samman.</figcaption>
+            <img src="assets/img/novareport-architecture-v3.drawio.png" alt="Arkitekturdiagram för examensarbetet" />
+            <figcaption>
+              Översikt över plattformens mikrotjänster och dataflöden mellan frontend, backend och externa API:er och RSS-flöden.
+            </figcaption>
           </figure>
         </div>
       </section>
 
       <section class="block project-page__section">
-        <h2 class="block-title">Frågor att besvara</h2>
+        <h2 class="block-title">Utvecklingssteg</h2>
+        <p>
+          Projektet utvecklas iterativt i fyra definierade faser, från ett funktionellt minimum till en marknadsfärdig produkt.
+          Varje steg representerar ett färgkodat stadium i arkitekturdiagrammet.
+        </p>
+
         <ul class="project-detail-list">
-          <li>Hur ska kryptotjänsterna integreras utan att kompromissa med säkerhet och compliance?</li>
-          <li>Vilka monitorerings- och loggningsstrategier behövs för att bygga förtroende?</li>
-          <li>Hur kan lösningen paketeras så att den blir lätt att demonstrera?</li>
+          <li><strong>UMVP (Ultra Minimal Viable Product)</strong> – Grunden: RSS-insamling från en källa, enkel AI-sammanfattning, utskrift i frontend, lokal drift.</li>
+          <li><strong>MVP (Minimal Viable Product)</strong> – Fullt fungerande backend-flöde: reporter, subscriptions och Discord-notifieringar.</li>
+          <li><strong>MMP (Minimal Marketable Product)</strong> – Integration av betalningstjänster (XMR), e-post och dashboard, driftsätta på dedikerad server.</li>
+          <li><strong>Nice to have</strong> – Integration av betalningstjänst (BTC), Telegram-integration samt driftsätta i molnet.</li>
         </ul>
       </section>
 
       <section class="block project-page__section">
-        <h2 class="block-title">Utvecklingslogg</h2>
+        <h2 class="block-title">Tidslinje</h2>
+        <ul class="project-detail-list">
+          <li><strong>Vecka 1:</strong> Förstudie, datakällor, systemdesign, PoC för reporter-service.</li>
+          <li><strong>Vecka 2:</strong> Få upp en Ultra Minimal Viable Product som levererar en rapport från ett RSS-flöde.</li>
+          <li><strong>Vecka 3:</strong> CI/CD och prenumerations- och kontohantering.</li>
+          <li><strong>Vecka 4:</strong> Kryptobetalning och verifiering.</li>
+          <li><strong>Vecka 5:</strong> Dashboard och e-postintegration (MMP).</li>
+          <li><strong>Vecka 6:</strong> Telegram-integration, testning och säkerhetsgranskning.</li>
+          <li><strong>Vecka 7:</strong> Dokumentation och förberedelse för demo.</li>
+          <li><strong>Vecka 8:</strong> Slutpresentation och portfolio-release.</li>
+        </ul>
+      </section>
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Centrala frågeställningar</h2>
         <p>
-          Kort veckologg över examensarbetet. Klicka på inlägget för att läsa mer. 
+          Kryptomarknaden och tekniksektorn präglas av en enorm informationsmängd, tusentals artiklar,
+          forumtrådar och sociala flöden som ofta är partiska, fragmenterade eller fyllda med brus.
+          <strong>Nova Report</strong> undersöker hur moderna integrationsmönster och AI kan användas
+          för att strukturera detta informationskaos och leverera faktabaserade insikter i realtid.
         </p>
+
+        <p>
+          Plattformen fungerar som en “Crypto Briefing-as-a-Service”: den samlar nyheter från flera källor,
+          filtrerar bort upprepningar och brus, låter en AI-modul skriva sammanfattningar
+          och levererar sedan resultatet direkt till användaren via E-post, Discord eller dashboard.
+          Det är ett praktiskt exempel på hur AI, dataintegration och säkerhetsdesign kan samverka i en verklig miljö.
+        </p>
+
+        <p>
+          <strong>Vad betyder “Crypto Briefing-as-a-Service”?</strong><br />
+          Uttrycket är en lek med SaaS-begreppet (<em>Software as a Service</em>), alltså molnbaserade tjänster
+          som levererar färdig funktionalitet till användaren utan att denne behöver installera något själv.
+          “Crypto Briefing-as-a-Service” betyder därför i praktiken: en automatiserad tjänst som samlar, filtrerar,
+          analyserar och sammanfattar nyheter från kryptovärlden och levererar färdiga, lättlästa rapporter
+          direkt till användaren.
+        </p>
+
+        <ul class="project-detail-list">
+          <li>
+            <strong>Hur kan AI användas för att skapa tillförlitliga insikter från stora, brusiga nyhetsflöden?</strong><br />
+            Fokus ligger på textanalys, sammanfattning och källfiltrering, inte att ersätta journalistik, utan att ge en snabbare och mer fokuserad överblick.
+          </li>
+          <li>
+            <strong>Hur kan en modulär arkitektur balansera enkelhet, prestanda och skalbarhet?</strong><br />
+            Genom att separera tjänster som betalning, rapportering och notifiering skapas en robust och utbyggbar helhet.
+          </li>
+          <li>
+            <strong>Hur kan en integrationslösning paketeras pedagogiskt och transparent?</strong><br />
+            Målet är att skapa en lösning som inte bara fungerar tekniskt utan också demonstrerar integrationsflöden,
+            säkerhetsaspekter och datahantering på ett sätt som är tydligt för både tekniska och icke-tekniska mottagare.
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="block project-page__section">
+        <h2 class="block-title">Utvecklingslogg</h2>
+        <p>Kort veckologg över projektets framsteg. Klicka på en vecka för att läsa mer.</p>
+
         <details class="log">
-          <summary>Vecka 1 – Förstudie och planering</summary>
+          <summary>Vecka 1 – TBD</summary>
           <article class="log-entry">
-            <p>
-              Beskriv vad jag har gjort denna vecka. Till exempel: satt upp repos, definierat mål och grov arkitektur, identifierat risker.
-            </p>
+            <p></p>
             <ul>
-              <li><strong>Fokus:</strong> Förstudie, kravinsamling, PoC-idéer.</li>
+              <li><strong>Fokus:</strong> </li>
               <li><strong>Hinder:</strong> </li>
               <li><strong>Nästa steg:</strong> </li>
             </ul>
@@ -189,6 +238,9 @@
       </section>
 
       <footer class="project-page__footer">
+        <a class="project-link" href="https://github.com/david-andreasson/novareport" target="_blank" rel="noopener">
+          Öppna repot på Github
+        </a>
         <a class="project-link" href="index.html">Tillbaka till portfolion</a>
       </footer>
     </div>
