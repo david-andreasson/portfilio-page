@@ -180,13 +180,19 @@
           </article>
         </details>
         <details class="log">
-          <summary>Vecka 3 – TBD</summary>
+          <summary>Vecka 3 – Migrering till Postgres och mer nyhetskällor</summary>
           <article class="log-entry">
             <p></p>
             <ul>
-              <li><strong>Fokus:</strong> </li>
-              <li><strong>Hinder:</strong> </li>
-              <li><strong>Nästa steg:</strong> </li>
+              <li><strong>Fokus:</strong> Denna vecka har jag lagt fokus på att migrera från H2 till Postgres i produktionsmiljön och att lägga till mer nyhetskällor.
+              Nu har jag fått in alla 4 rss-flöden och ett externt api för att hämta nyheter som jag sedan kan skapa en rapport av. Jag har också lagt grunderna till ett audit-system av min kod där ai hjälper mig att skapa en rapport av min kod och ger mig en åtgärdslista för att förbättra koden. 
+              Detta är något som jag tycker är väldigt intressant och kan förhoppningsvis viderautveckla under kommande veckor.
+              Jag har också hunnit få till en fungerande pipeline mellan min laptop, github actions, vidare till dockerhub och till sist till en ubuntu-server. Detta har jag gjort i flera tidigare projekt så det gick relativt snabbt.</li>
+              <br>
+              <li><strong>Hinder:</strong> Migrering till Postgres tog mer tid än planerat, mest för att jag inte jobbat med Postgres tidigare och jag hade inte koll på alla miljövariabler osv. Jag hade mycket strul med autentisering mot databasen och det tog nästan en hel dag att få till.</li>
+              <br>
+              <li><strong>Nästa steg:</strong> Nästa vecka kommer till stor del bestå av att få till en 100% fungerande monero-betalning, jag misstänker att det arbetet kommer äta upp flera dagar då det inte verkar lika straightforward som att lägga till en Stripe integration till exempel.
+              Jag har redan satt upp en del av betalningsflödet i både backend och frontend, men där själva betalningsmomentet är mockat.</li>
             </ul>
           </article>
         </details>
