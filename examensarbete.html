@@ -197,13 +197,20 @@
           </article>
         </details>
         <details class="log">
-          <summary>Vecka 4 – TBD</summary>
+          <summary>Vecka 4 – Från UMVP till MVP/MMP</summary>
           <article class="log-entry">
             <p></p>
             <ul>
-              <li><strong>Fokus:</strong> </li>
-              <li><strong>Hinder:</strong> </li>
-              <li><strong>Nästa steg:</strong> </li>
+              <li><strong>Fokus:</strong> Vecka 4 i detta projekt så gick jag från en UVMP till en MVP/MMP där systemet nu skapar en rapport av nyheter från flera källor.
+              Det går att betala med monero, till systemets egna wallet i en egen container, men jag har stannat på stagenet (monero utan monetärt värde används) för att hålla nera mina kostnader under alla tester jag utför. Att gå från stagenet till mainnet (där riktiga xmr använd) är bara en fråga om att ändra några miljövaribler.<br /><br />
+              Sedan förut så kan alla användare se rapporten i frontend men nu kan systemet också generera en rapport anpassad för Discord och levererar den till en kanal var fjärde timme. Meningen här är att en betalande medlem får tillgång till denna kanalen vid lyckad prenumeration.
+              Jag har en tanke om att skapa en bot som man kan skicka ett kommando för att se rapporten men det får bli en nice-to-have-funktion att implementera om jag får tid över i projektet.<br /><br />
+              Systemet skickar nu också ut en daglig rapport via email till registrerade medlemmar. Jag har också utfört flera stycken audits på koden och implementerat föreslagna förbättringar.
+              Jag har infört tester med en ungefärlig kodtäckning på 80% på både frontend och backend-kod.</li>
+              <br>
+              <li><strong>Hinder:</strong> Det har inte dykt upp några egentliga hinder denna vecka men jag har lagt extremt mycket tid på projektet. Dels för att jag tycker det är kul men också för att se till att ligga bra till i planeringen så jag inte halkar efter.</li>
+              <br>
+              <li><strong>Nästa steg:</strong> Nästan alla funktioner som jag hade tänkt att ha i systemet på en MMP-nivå finns nu tillgängliga i minimal version men allt måste putsas och testas ordentligt. Så fokus denna vecka kommer ligga på att finjustera funktioner och koden så allt fungerar så nära felfritt som möjligt. Om jag har tid så kommer jag även att putsa frontend så att den blir mer användarvänlig och kanske lägga till ett admin-gränssnitt för att kunna se metrics osv.</li>
             </ul>
           </article>
         </details>
